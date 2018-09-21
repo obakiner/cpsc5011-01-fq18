@@ -1,6 +1,6 @@
 # cpsc5011-01-fq18
 
-Seattle U, CPSC 5011, Section 1, Fall Quarter 2018 -- Class Development
+### Seattle U, CPSC 5011, Section 1, Fall Quarter 2018 -- Class Development ###
 
 We will use this repository for
 * Projects we work on during class lab sessions
