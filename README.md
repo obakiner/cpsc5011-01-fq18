@@ -13,5 +13,7 @@ Except for this file.  Within each directory we will subdivide according to cont
 when you submit code written individually or by a group, you will create another directory identifying the individual or group.
 So expect a lot of directory structure.
 
+At least for now we will work only in the master branch.  Having individuals work in branches then merge is just asking for time-consuming and heartbreaking merge conflicts.  And who needs that?
+
 
 
