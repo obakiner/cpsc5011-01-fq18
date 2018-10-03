@@ -9,7 +9,7 @@ public class Driver {
 	
 	public static void main(String[] args) throws TemplateInstantiationException {
 		// Prepare arguments
-		String template = "Hello $name you have nice $eyecolor eyes";
+		String template = "Good $daypart $name you have nice $eyecolor eyes";
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("$name", "Steve");
 		params.put("$eyecolor", "blue");

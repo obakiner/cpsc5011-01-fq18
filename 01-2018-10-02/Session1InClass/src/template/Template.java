@@ -1,6 +1,7 @@
 package template;
 
 import java.util.Map;
+import daypart.DayPart;
 
 public class Template {
 	private String[] words;
@@ -17,15 +18,17 @@ public class Template {
 		String[] sa = new String[words.length];
 		for (int i=0; i < words.length; i++) {
 			if (isVariable(words[i])) {
-				if (params.containsKey(words[i])) {
-						sa[i] = params.get(words[i]);
-					} else {
-						throw new TemplateInstantiationException();
-					}
+				if (words[i].equals("$daypart")) {
+					sa[i] = (new DayPart()).toString();
+				} else if (params.containsKey(words[i])) {
+					sa[i] = params.get(words[i]);
 				} else {
-					sa[i] = words[i];
+					throw new TemplateInstantiationException();
 				}
+			} else {
+				sa[i] = words[i];
 			}
-			return String.join(" ", sa);
+		}
+		return String.join(" ", sa);
 	}
 }
