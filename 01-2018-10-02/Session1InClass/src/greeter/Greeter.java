@@ -2,15 +2,18 @@ package greeter;
 
 import java.util.Map;
 
+import template.Template;
+import template.TemplateInstantiationException;
+
 public class Greeter {
-	private Map<String, String> params;
+	private Template template;
 	
-	public Greeter(Map<String, String> params) {
-		this.params = params;
+	public Greeter(Template template) {
+		this.template = template;
 	}
 	
-	public String greet() {
-		return "Hello " + params.get("name");
+	public String greet(Map<String, String> params) throws TemplateInstantiationException {
+		return template.format(params);
 	}
 
 }
