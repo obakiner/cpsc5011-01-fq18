@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Zuyan
- *
- */
-module Test {
-}
