@@ -1,10 +1,10 @@
 import capstack.CapStackInterface;
-import capstack.CapStackStub;
+import capstack.CapStack;
 
 public class Driver {
 
 	public static void main(String[] args) {
-		CapStackInterface<String> cs = new CapStackStub<String>(1);
+		CapStackInterface<String> cs = new CapStack<String>(1);
 		cs.push("hello");
 		cs.push("world");
 	}

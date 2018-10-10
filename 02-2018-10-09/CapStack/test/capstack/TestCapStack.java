@@ -8,23 +8,18 @@ import org.junit.jupiter.api.Test;
 
 class TestCapStack {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testConstructorValid() {
+		CapStackInterface<String> cs = new CapStack<String>(1);
+		assertTrue(cs.size()==0);
+		assertTrue(cs.capacity() == 1);
+		assertTrue(cs.isEmpty());
+		assertTrue(!cs.isFull());
 	}
 
+	void testConstructorInvalid() {
+	}
+	
+	void testConstructorZeroSize() {
+	}
 }
