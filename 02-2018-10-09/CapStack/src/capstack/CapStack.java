@@ -1,10 +1,22 @@
 package capstack;
 
-/* Class invariants
- *    capacity > 0;  size > 0; capacity <= size
- *    no element is NULL
+/**
+ * 
+ * @author hanks
  *
+ * @param <T> -- any subclass of Object
+ * 
+ * Stack with capacity on number of elements.  Class invariants
+ *    Enforced
+ *     capacity >= 0
+ *     0 <= size
+ *     isEmpty is true iff size() == 0
+ *
+ *    Unenforced
+ *       size <= capacity
+ *       isFull is true iff size() == capacity
  */
+
 
 public class CapStack<T> implements CapStackInterface<T>{
 		private int capacity;
