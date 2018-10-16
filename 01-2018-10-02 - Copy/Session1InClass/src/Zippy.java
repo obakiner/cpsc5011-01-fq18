@@ -2,7 +2,8 @@
 public class Zippy {
 	private List<String> quoteFile;
 	private static final String FILE_NAME = "C:\\Users\\hanks\\Desktop\\yow.lines";
-
+	private static int NUM_LINES = 132;
+	
 	public Zippy() {
 		quoteFile = null;
 		try {
@@ -16,6 +17,10 @@ public class Zippy {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	private random() {
+		return (new Random()).nextInt(NUM_LINES);
 	}
 	
 	public String toString() {
