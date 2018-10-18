@@ -24,7 +24,7 @@ public class Zippy {
 	}
 	
 	public String toString() {
-		return zippyQuoteFile.get(this.random());
+		return quoteFile.get(this.random());
 	}
 
 }

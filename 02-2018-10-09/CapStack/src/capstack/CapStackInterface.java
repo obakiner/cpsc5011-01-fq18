@@ -10,8 +10,6 @@ public interface CapStackInterface<T> {
 	public T peek() throws EmptyStackException;
 	public T pop() throws EmptyStackException;
 	
-	// Untested precondition to push on a full stack
-	// Untested precondition to insert a null
 	public void push(T t);
 
 	public void clear();
