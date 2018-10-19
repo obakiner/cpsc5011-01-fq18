@@ -12,7 +12,7 @@ class TestPop {
 
 	
 	@Test
-	public void testNormal() {
+	public void testNormal() throws EmptyStackException {
 		CapStack<String> cs = new CapStack<String>(2);
 		cs.push("a");
 		String peeked = cs.peek();

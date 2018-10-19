@@ -17,7 +17,7 @@ package capstack;
  */
 
 
-public class CapStack<T> implements CapStackInterface<T> {
+public class CapStack<T> {
 	private int capacity;
 	private int nextElement;
 	private T[] storage;
@@ -39,38 +39,73 @@ public class CapStack<T> implements CapStackInterface<T> {
 		this.storage = (T[]) new Object[capacity];
 	}
 
+	/**
+	 * @return Maximum possible number of elements in stack
+	 */
 	public int capacity() {
 		return this.capacity;
 	}
 
+	/**
+	 * @return Actual number of elements in stack
+	 */
 	public int size() {
 		return nextElement;
 	}
 
+	/**
+	 * @return True if and only if there are no elements in stack
+	 */
 	public boolean isEmpty() {
 		return size() == 0;
 	}
 
+	/**
+	 * 
+	 * @return True if and only if number of elements in the stack equals stack's capacity
+	 */
 	public boolean isFull() {
 		return size() == capacity;
 	}
 
-	public T peek() {
+	/**
+	 * 
+	 * @return The first element in the stack, without modifying the stack
+	 * @throws EmptyStackException If the stack is empty
+	 */
+	public T peek() throws EmptyStackException {
+		if (nextElement <= 0) {
+			throw new EmptyStackException();
+		}
 		return storage[nextElement-1];
 	}
 
+	/**
+	 * Adds an element to the beginning of the stack.
+	 * Precondition:  this.capacity() must be false
+	 * @param t  The element to be added
+	 */
 	public void push(T t) {
 		assert size() < capacity() : "Try to push to full stack";
 		storage[nextElement] = t;
 		nextElement += 1;
 	}
 
-	public T pop() {
+	/**
+	 * Removes and returns the first element in the stack
+	 * @return The first element in the stack
+	 * @throws EmptyStackException  If the stack is empty
+	 */
+	public T pop() throws EmptyStackException {
 		T firstElement = peek();
 		nextElement -= 1;
 		return firstElement;
 	}
 
+	/**
+	 * Remove all elements from the stack.  IsEmpty() will be true 
+	 * following this call.
+	 */
 	public void clear() {
 		nextElement = 0;
 	}

@@ -40,7 +40,7 @@ class TestConstructor {
 	}
 	
 	@Test
-	void testSize() {
+	void testSize() throws EmptyStackException {
 		CapStack<String> cs = new CapStack<String>(2);
 		assertTrue(cs.size() == 0);
 		cs.push("a");
