@@ -6,12 +6,13 @@ package vault;
 	public Vault();
 	public Vault(encrypt.Encryptor e);
 	
-  The vault must also implement the following method for
-  debugging / testing purposes.  Note that this method
-  has package-level visibility
+  The vault must also implement the following two methods for
+  debugging / testing purposes.  Note that these methods
+  have package-level visibility
   
   String getEncryptedPassword(String username, String sitename)
      throws UserNotFountException, SiteNotFoundException;
+  Encryptor getEncryptor();
 */
 
 public interface VaultInterface {
