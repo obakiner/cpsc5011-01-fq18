@@ -23,6 +23,10 @@ public class CaesarCypher implements Encryptor {
 		this(DEFAULT_CHARS, offset);
 	}
 
+	public CaesarCypher(String chars) {
+		this(chars, (int)chars.length()/2);
+	}
+
 	public CaesarCypher() {
 		this(DEFAULT_CHARS, (int) (DEFAULT_CHARS.length() / 2));
 	}
