@@ -1,0 +1,65 @@
+
+======================================================
+Bank Report -- $1,000.00 available
+
+======================================================
+Bank Report -- $1,800.00 available
+  Customer 1 -- CustomerName 1/Phone 1
+    Checking account balance is $500.00
+      Transaction: DEPOSIT $500.00
+  Customer 2 -- CustomerName 2/Phone 2
+    Savings account balance is $300.00
+      Transaction: DEPOSIT $400.00
+      Transaction: WITHDRAW $100.00
+  Employee EmployeeName 1/Phone 3 salary $100.00 total salary $0.00
+  Employee EmployeeName 2/Phone 4 salary $200.00 total salary $0.00
+
+======================================================
+Bank Report -- $1,498.00 available
+  Customer 1 -- CustomerName 1/Phone 1
+    Checking account balance is $499.00
+      Transaction: DEPOSIT $500.00
+      Transaction: FEE $1.00
+  Customer 2 -- CustomerName 2/Phone 2
+    Savings account balance is $303.00
+      Transaction: DEPOSIT $400.00
+      Transaction: WITHDRAW $100.00
+      Transaction: INTEREST $3.00
+  Employee EmployeeName 1/Phone 3 salary $100.00 total salary $100.00
+  Employee EmployeeName 2/Phone 4 salary $200.00 total salary $200.00
+
+Trying to withdraw too much from savings
+  Good!  Could not withdraw that much.
+
+Trying to deposit to a closed account.
+  Good!  Could not make the deposit.
+
+======================================================
+Bank Report -- $2,201.97 available
+  Customer 1 -- CustomerName 1/Phone 1
+    Checking account CLOSED balance is -$1.00
+      Transaction: DEPOSIT $500.00
+      Transaction: FEE $1.00
+      Transaction: WITHDRAW $499.00
+  Customer 2 -- CustomerName 2/Phone 2
+    Savings account balance is -$703.97
+      Transaction: DEPOSIT $400.00
+      Transaction: WITHDRAW $100.00
+      Transaction: INTEREST $3.00
+      Transaction: INTEREST -$6.97
+  Customer 3 -- CustomerName 3/Phone 3
+    Checking account balance is $999.00
+      Transaction: DEPOSIT $1,000.00
+      Transaction: FEE $1.00
+    Savings account balance is $505.00
+      Transaction: DEPOSIT $500.00
+      Transaction: INTEREST $5.00
+  Employee EmployeeName 1/Phone 3 salary $100.00 total salary $200.00
+  Employee EmployeeName 2/Phone 4 salary $200.00 total salary $400.00
+
+This operation should break the bank!
+Exception in thread "main" bank.BrokenBankError
+	at bank.Bank.decreaseFunds(Bank.java:37)
+	at bank.Employee.monthly(Employee.java:15)
+	at bank.Bank.monthly(Bank.java:82)
+	at Driver.main(Driver.java:47)
