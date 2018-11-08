@@ -35,18 +35,18 @@ Trying to deposit to a closed account.
   Good!  Could not make the deposit.
 
 ======================================================
-Bank Report -- $2,201.97 available
+Bank Report -- $2,191.97 available
   Customer 0 -- CustomerName 1/Phone 1
-    Checking account CLOSED balance is -$1.00
+    Checking account CLOSED balance is $0.00
       Transaction: DEPOSIT $500.00
       Transaction: FEE $1.00
       Transaction: WITHDRAW $499.00
   Customer 1 -- CustomerName 2/Phone 2
-    Savings account balance is -$703.97
+    Savings account balance is $306.03
       Transaction: DEPOSIT $400.00
       Transaction: WITHDRAW $100.00
       Transaction: INTEREST $3.00
-      Transaction: INTEREST -$6.97
+      Transaction: INTEREST $3.03
   Customer 4 -- CustomerName 3/Phone 3
     Checking account balance is $999.00
       Transaction: DEPOSIT $1,000.00
