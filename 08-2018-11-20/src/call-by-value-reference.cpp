@@ -15,4 +15,21 @@ using namespace std;
  *  	-- use ref to point multiple variables at the same storage address
  */
 
+struct Simple {int id;};
 
+void trash_variables(int ii, string ss, Simple sisi) {
+	ii =0;
+	ss.clear();
+	sisi.id = 1;
+}
+
+void call_by_value_reference_example() {
+	int i = 5;
+	string s = "hello";
+	Simple simple;
+	simple.id = 9999;
+	cout << i << " " << s << " " << simple.id << endl;
+	trash_variables(i, s, simple);
+	cout << i << " " << s << " " << simple.id << endl;
+
+}

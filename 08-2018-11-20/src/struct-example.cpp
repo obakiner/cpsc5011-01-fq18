@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include "contact-info.h"
 
@@ -10,6 +11,9 @@
  * struct ContactInfo acts as an ADT.  It has storage and setters and getters and a "method"
  * pretty_string.
  *
+ *  contact-info.h  has the declaration of the structure and its "methods"
+ *  contact-info.cpp   includes contact-info.h and contains the definitions
+ *      of its "methods"
  */
 
 void struct_example() {
