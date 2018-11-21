@@ -1,0 +1,66 @@
+Practice Problems 11/20
+
+==============================================
+1. Ordered pair library
+
+Create a "library" (.h .cpp pair) for manipulating Ordered Pairs of int.
+An ordered pair is two ints (x,y) such that x <= y.   
+Implement OrderedPair as a struct.
+Your library should provide the following functions
+
+    OrderedPair* newOrderedPair(int x, int y);
+       -- Allocate space for and return an ordered pair with the argument values, or NULL if x > y.  
+       
+    void negateOrderedPair(int x, int y);
+       -- Destructively negate the ordered pair
+       
+    OrderedPair* add(OrderedPair op1, OrderedPair op2);
+       -- Allocate space for and return an ordered pair that is the addition of its
+           arguments.  Addition is defined as (op1.x + op2.x, op1.y + op2.y)
+           
+    void printOrderedPair(OrderedPair op);
+       -- Pretty print the pair to the console
+       
+Demonstrate the library with a main function that 
+  -- first prompts the user for X and Y and produces and stores an ordered pair, or 
+       prints an error message if X > Y
+  -- after an ordered pair is stored, the user has the option of 
+       -- negate the ordered pair (and store the negated version)
+       -- prompt for a new X and Y, create an ordered pair with it, add it to the stored 
+            pair, print the new pair, and store the new pair
+       -- repeat this loop infinitely
+       
+========================================
+2.  C-Strings
+   *  Case manipulation.   Takes as input a string and a character which is one of 'l' 'u' 'w' and 
+        case corrects according to the character
+           -- 'u' converts every letter in the input string to upper case
+           -- 'w' converts the string to "word case" -- the first letter in the string and every 
+               letter immediately following a space character is upper case;  the rest are lower case
+      The function should be implemented as three "helper" functions, each doing the processing for one
+      kind of correction.
+      
+      EASIER VERSION -- your transformation is on the input string directly
+      HARDER VERSION -- you make a copy of the input string and transform the copy
+      
+      Demonstrate the function with a console application that first prompts for and
+      reads a character 'u' or 'w' (print error message on bad input) then prompts 
+      for and reads a line of text, then applies the appropriate function and prints
+      the original string (and the transformed copy, if you did the harder version).
+      
+ Hint:
+#include <ctype.h>
+char c1 = 'A';
+char c2 = tolower(c1);
+  
+===========================================
+3.  Linked Lists
+  Extend the linked list package and example program we wrote in class to do these operations:
+  
+    int lengthLinkedList(LinkedList *list);
+    bool deleteLinkedList(LinkedList *list, NodeData nd); 
+      -- delete the first element of the list that is equal to the input NodeData.
+         Return true if an element was deleted, false otherwise.
+  
+     
+ 

@@ -21,4 +21,6 @@ int main() {
 
 	cout << "Here is a pretty string for the contact with ID " << ci.idNumber << endl;
 	cout << pretty_string(ci) << endl;
+	cout << "This is how big a ContactInfo is: " << sizeof(ContactInfo) << ". Why is that?" << endl;
+	cout << "This is how big a string is: " << sizeof(string) << ". Why is that?" << endl;
 }
