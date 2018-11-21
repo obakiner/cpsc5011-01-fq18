@@ -6,6 +6,10 @@ int add(double a, double b) {
 	return (int)a+b;
 }
 
+// The first argument of this function is itself a function.
+// This fuction applies the first argument function to its
+// other two arguments, and returns the result
+
 int apply(int (*fp)(double, double) , double a, double b) {
 	return (*fp)(a, b);
 }

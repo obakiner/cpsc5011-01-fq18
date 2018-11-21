@@ -6,7 +6,7 @@ using namespace std;
 //void pointer_example();
 //OMIT void function_pointer_example();
 //void array_example();
-void cstring_example();
+//void cstring_example();
 //void linked_list_example();
 
 int main() {
@@ -15,7 +15,7 @@ int main() {
 	//pointer_example();
 	//function_pointer_example();
 	//array_example();
-	cstring_example();
+	//cstring_example();
 	//linked_list_example();
 
 	//return 0;
