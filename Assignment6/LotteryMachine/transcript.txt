@@ -1,0 +1,18 @@
+Setting up machine
+Placing bets
+
+Bets are placed, machine is closed.  Summary.
+
+Lottery Machine Summary
+ The machine is CLOSED
+ Lucky number is 50
+ Bets are: 
+     Name= Fannie Amount= 100
+     Name= Flo Amount= 200
+     Name= Jackie Amount= 10
+ Total bet: 310
+ Payout: 294.5
+
+Winners are:
+  Fannie 267.73
+  Jackie 26.77

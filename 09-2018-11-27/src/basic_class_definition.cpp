@@ -13,9 +13,19 @@ using namespace std;
  *    3.  Compare addresses of assigned object -- they are different
  *         -- Introduce copy constructor
  */
+#include "rectangle.h"
+
+void test_destructor() {
+	Rectangle r;
+}
 void basic_class_definition() {
-
-
+	test_destructor();
+	//Rectangle r;
+	//delete &r;
+	//Rectangle r2 = r;
+	//cout << &r << endl;
+	//cout << &r2 << endl;
+	//cout << r.getWidth() << " " << r.getHeight() << endl;
 }
 
 /*  CHEATING

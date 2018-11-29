@@ -18,9 +18,17 @@
  *     * Array access
  *     * Custom printing
  */
+#include <iostream>
+#include "ordered-pair.h"
+using namespace std;
 
 void overloading() {
-
+	OrderedPair o(1.0, 2.0), o2(3.5, 4.7);
+	OrderedPair sum = o + o2;
+	//cout << o.getX() << " " << o.getY() << endl;
+	cout << sum.getX() << " " << sum.getY() << endl;
+	char c;
+	cin >> c;
 }
 
 /* CHEATING
